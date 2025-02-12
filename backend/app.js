@@ -36,14 +36,14 @@ app.post("/tasks", (req, res) => {
 
 app.put("/tasks/:id", (req, res) => {
   const { id } = req.params;
-  const { title } = req.body;
+  const { title } = req.body; // Only accept the `title` field
   const taskIndex = tasks.findIndex((task) => task.id === Number(id));
 
   if (taskIndex === -1) {
     return res.status(404).json({ message: "Task not found" });
   }
 
-  tasks[taskIndex].title = title; // Update the task title
+  tasks[taskIndex].title = title; // Update only the `title` field
   res.json({ message: "Task updated successfully", task: tasks[taskIndex] });
 });
 

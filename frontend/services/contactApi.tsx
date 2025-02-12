@@ -24,7 +24,7 @@ export const taskApi = createApi({
       query: (task) => ({
         url: `/tasks/${task.id}`, // Update a task
         method: "PUT",
-        body: task,
+        body: { title: task.title },
       }),
       invalidatesTags: ["Task"],
     }),

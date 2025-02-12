@@ -9,11 +9,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+} from "./ui/sheet";
+import { Button } from "./ui/button";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+
 import {
   Form,
   FormControl,
@@ -22,11 +24,11 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useUpdateTasksMutation } from "@/services/contactApi";
+import { useUpdateTasksMutation } from "@/services/contactApi"; // Update import
 
+// Updated schema without the `description` field
 const formSchema = z.object({
   title: z.string().min(3),
-  body: z.string().min(3),
 });
 
 const EditTodoSheet = ({ task }: { task: any }) => {
@@ -36,14 +38,14 @@ const EditTodoSheet = ({ task }: { task: any }) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: task.title,
-      body: task.body,
+      title: task.title, // Pre-fill the form with the task's title
     },
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
-      const response = await updateTask(data).unwrap(); // Send the updated task data
+      const updatedTask = { ...task, title: data.title }; // Only update the `title` field
+      const response = await updateTask(updatedTask).unwrap(); // Send the updated task data
       console.log("Task updated successfully:", response); // Log the response
     } catch (error) {
       console.error("Failed to update task:", error);
@@ -63,7 +65,7 @@ const EditTodoSheet = ({ task }: { task: any }) => {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Edit Task</SheetTitle>
-          <SheetDescription>Update the details of your task</SheetDescription>
+          <SheetDescription>Update the title of your task</SheetDescription>
         </SheetHeader>
         <Form {...form}>
           <form
@@ -76,18 +78,6 @@ const EditTodoSheet = ({ task }: { task: any }) => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Title</FormLabel>
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
