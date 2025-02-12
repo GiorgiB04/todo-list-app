@@ -38,7 +38,7 @@ const AddTodoSheet = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: "", // Only `title` is needed now
+      title: "",
     },
   });
 

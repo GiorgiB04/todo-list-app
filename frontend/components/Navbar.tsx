@@ -1,6 +1,5 @@
 import React from "react";
 import { ModeToggle } from "./ModeToggle";
-import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (

@@ -4,7 +4,7 @@ import { Tasks } from "../models/tasks.models";
 export const taskApi = createApi({
   reducerPath: "taskApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080", // Ensure this matches your backend URL
+    baseUrl: "http://localhost:8080",
   }),
   tagTypes: ["Task"],
   endpoints: (builder) => ({
