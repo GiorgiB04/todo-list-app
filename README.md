@@ -48,4 +48,4 @@ Wynik powinien być wykonany na osobnej gałęzi i przesłany jako pull request 
 
 - Zadbaj o walidację danych w formularzu.
 - Upewnij się, że interfejs użytkownika jest intuicyjny i przyjazny.
-- Zastosuj najlepsze praktyki programistyczne w kodzie frontendowym i backendowym.
+- Zastosuj najlepsze praktyki programistyczne w kodzie frontendowym i backendowym..
