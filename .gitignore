@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Build directories
+dist/
+build/
+out/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependency directories
+.pnp
+.pnp.js
+
+# npm/yarn cache
+.npm
+.yarn
+yarn-error.log
+
+# Local development files
+.local
+.tmp
+.temp
+
+# Docker-related files
+docker-compose.override.yml
