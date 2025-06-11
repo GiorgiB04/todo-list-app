@@ -62,14 +62,14 @@ Edit
 ```bash
 git clone https://github.com/GiorgiB04/todo-list-app.git
 cd todo-list-app
-2. Start the full stack environment with Docker
-bash
-Copy
-Edit
+```
+
+### 2. Start the full stack environment with Docker
+```
 docker-compose up --build
 The frontend will be available at: http://localhost:3000
 Backend API will run on: http://localhost:5000/api/messages
-
+```
 
 🧑‍💻 Author
 Giorgi Boch
