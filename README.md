@@ -1,51 +1,79 @@
-# Zadanie Rekrutacyjne
+# 📝 Todo List App
 
-## Cel
+A full-featured Todo List application built with **React**, **Redux Toolkit (RTK Query)**, **MySQL**, and **Docker**.  
+This project demonstrates a complete CRUD flow, backend API integration, and responsive UI — ideal for task management in a modern development stack.
 
-Rozbudowa istniejącego projektu poprzez implementację formularza do dodawania wiadomości do bazy danych. Dodatkowo, wiadomości powinny być wyświetlane w tabeli z następującymi kolumnami: ID, Wiadomość, Akcje.
+---
 
-## Wymagania
+## 🚀 Features
 
-- Node.js v18.17.0+
-- Docker v20.10.11+
+- ✅ Add, edit, and delete tasks
+- ✅ Persistent storage with MySQL database
+- ✅ API calls managed with RTK Query
+- ✅ Responsive and clean UI using Tailwind CSS
+- ✅ Edit tasks in a modal popup
+- ✅ Dockerized backend and database environment
 
-### Formularz dodawania wiadomości
+---
 
-- Umożliwia wprowadzenie treści wiadomości oraz dodanie jej do bazy danych.
+## 🛠️ Tech Stack
 
-### Tabela wiadomości
+**Frontend:**
+- React.js
+- Redux Toolkit & RTK Query
+- Tailwind CSS
+- ShadCN UI Components
 
-- Wyświetla listę wiadomości z kolumnami: ID, Wiadomość, Akcje.
-- W każdym wierszu w kolumnie "Akcje" powinny znajdować się dwie funkcjonalności:
-  - **Edycja**: Po naciśnięciu przycisku "Edytuj", powinien pojawić się popup z formularzem umożliwiającym edycję wybranej wiadomości.
-  - **Usuwanie**: Po naciśnięciu przycisku "Usuń", wiadomość powinna zostać usunięta z bazy danych.
+**Backend:**
+- Node.js
+- Express.js
+- Sequelize ORM
+- MySQL 8.0
 
-### Backend
+**DevOps:**
+- Docker & Docker Compose
 
-- Należy samodzielnie zaimplementować backend, który obsłuży dodawanie, edytowanie i usuwanie wiadomości z bazy danych.
+---
 
-### Użycie RTK Query
+## 📁 Project Structure
 
-- Do komunikacji z serwerem należy wykorzystać RTK Query.
+todo-list-app/
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ └── db.json (or config.js)
+├── frontend/
+│ ├── components/
+│ ├── features/
+│ ├── pages/
+│ └── App.jsx
+└── docker-compose.yml
 
-### Komponenty ShadCN
+yaml
+Copy
+Edit
 
-- W projekcie należy zastosować gotowe komponenty z biblioteki ShadCN, co umożliwi szybkie i estetyczne tworzenie interfejsu użytkownika.
+---
 
-### Uruchomienie projektu
+## ⚙️ Installation & Running Locally
 
-Aby uruchomić projekt, należy w terminalu w głównym katalogu projektu wpisać:
+### 1. Clone the repository
+```bash
+git clone https://github.com/GiorgiB04/todo-list-app.git
+cd todo-list-app
+2. Start the full stack environment with Docker
+bash
+Copy
+Edit
+docker-compose up --build
+The frontend will be available at: http://localhost:3000
+Backend API will run on: http://localhost:5000/api/messages
 
-```
-docker compose up
-```
 
-## Dystrybucja
+🧑‍💻 Author
+Giorgi Boch
+LinkedIn • GitHub
 
-Wynik powinien być wykonany na osobnej gałęzi i przesłany jako pull request do użytkownika @BiznesportTech.
-
-## Dodatkowe wskazówki
-
-- Zadbaj o walidację danych w formularzu.
-- Upewnij się, że interfejs użytkownika jest intuicyjny i przyjazny.
-- Zastosuj najlepsze praktyki programistyczne w kodzie frontendowym i backendowym..
+📃 License
+This project is licensed under the MIT License.
