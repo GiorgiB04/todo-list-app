@@ -73,7 +73,7 @@ Backend API will run on: http://localhost:5000/api/messages
 
 🧑‍💻 Author
 Giorgi Boch
-LinkedIn • [GitHub](https://github.com/GiorgiB04/)
+[LinkedIn](https://www.linkedin.com/in/gio-botchorishvili/) • [GitHub](https://github.com/GiorgiB04/)
 
 📃 License
 This project is licensed under the MIT License.
